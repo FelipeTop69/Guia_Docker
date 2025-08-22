@@ -4,18 +4,18 @@ Esta guía contiene todos los comandos esenciales para trabajar con Docker y Doc
 
 ## 📋 Tabla de Contenidos
 
-- [Comandos Docker Compose Específicos](#comandos-docker compose-específicos)
-- [Gestión de Contenedores](#gestión-de-contenedores)
-- [Monitoreo y Logs](#monitoreo-y-logs)
-- [Red y Conectividad](#red-y-conectividad)
-- [Gestión de Volúmenes](#gestión-de-volúmenes)
-- [Backup y Restore](#backup-y-restore)
-- [Limpieza del Sistema](#limpieza-del-sistema)
-- [Comandos Docker Generales Útiles](#comandos-docker-generales-útiles)
+- [Comandos Docker Compose Específicos](#compose)
+- [Monitoreo y Logs](#monitoreoLogs)
+- [Red y Conectividad](#redConectividad)
+- [Gestión de Volúmenes](#gestionVolumenes)
+- [Acceso a Bases de Datos por Consola](#dbConsola)
+- [Backup y Restore](#backupRestore)
+- [Limpieza del Sistema](#limpiezaSistema)
+- [Comandos Docker Generales Útiles](#general)
 
 ---
 
-## 🚀 Comandos Docker Compose Específicos
+<h2 id="compose">🚀 Comandos Docker Compose Específico DB</h2>
 
 ### Gestión Básica de Servicios
 
@@ -88,7 +88,7 @@ docker compose ps mysql
 
 ---
 
-## 📊 Monitoreo y Logs
+<h2 id="monitoreoLogs">📊 Monitoreo y Logs</h2>
 
 ### Visualización de Logs
 
@@ -105,7 +105,7 @@ docker compose logs --tail 50 sqlserver
 
 ---
 
-## 🌐 Red y Conectividad
+<h2 id="redConectividad">🌐 Red y Conectividad</h2>
 
 ### Inspección de Redes
 
@@ -127,7 +127,7 @@ docker exec cnt_mysql ping postgres
 
 ---
 
-## 💾 Gestión de Volúmenes
+<h2 id="gestionVolumenes">💾 Gestión de Volúmenes</h2>
 
 ### Listado e Inspección
 
@@ -168,7 +168,7 @@ docker cp ./mi_backup.sql cnt_mysql:/tmp/
 
 ---
 
-## 🖥️ Acceso a Bases de Datos por Consola
+<h2 id="dbConsola">🖥️ Acceso a Bases de Datos por Consola</h2>
 
 ### Conexión Directa a las Bases de Datos
 
@@ -296,7 +296,7 @@ SELECT @@VERSION;
 
 ---
 
-## 🗄️ Backup y Restore
+<h2 id="backupRestore"> Backup y Restore</h2>
 
 ### Creación de Backups
 
@@ -313,7 +313,7 @@ docker exec cnt_sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'tuC
 
 ---
 
-## 🧹 Limpieza del Sistema
+<h2 id="limpiezaSistema">🧹 Limpieza del Sistema</h2>
 
 ### Limpieza de Volúmenes
 
@@ -382,7 +382,7 @@ docker ps -a --format "table {{.Names}}\t{{.Mounts}}"
 
 ---
 
-## 🔧 Comandos Docker Generales Útiles
+<h2 id="general">🔧 Comandos Docker Generales Útiles</h2>
 
 ### Gestión de Imágenes
 
