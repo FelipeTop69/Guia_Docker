@@ -13,8 +13,6 @@ Esta guía contiene todos los comandos esenciales para trabajar con Docker y Doc
 - [Limpieza del Sistema](#limpiezaSistema)
 - [Comandos Docker Generales Útiles](#general)
 
-> Ver si un puerto esta ocupado: netstat -ano | findstr :4200
-
 ---
 
 <h2 id="compose">🚀 Comandos Docker Compose Específico DB</h2>
@@ -498,6 +496,9 @@ docker system prune -a
 ## 🎯 Comandos de Solución Rápida
 
 ```bash
+#Ver si un puerto esta ocupado
+netstat -ano | findstr :4200
+
 # Reinicio completo del proyecto
 docker compose down && docker compose up -d
 
