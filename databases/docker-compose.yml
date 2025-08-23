@@ -75,8 +75,6 @@ services:
         condition: service_healthy
       postgres:
         condition: service_healthy
-      sqlserver:
-        condition: service_healthy
     environment:
       ADMINER_DEFAULT_SERVER: mysql
       ADMINER_DESIGN: pepa-linha
