@@ -2,7 +2,7 @@ services:
   mysql:
     image: mysql:8.0
     container_name: cnt_mysql
-    restart: always
+    restart: no
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: testdb
@@ -23,7 +23,7 @@ services:
   postgres:
     image: postgres:17
     container_name: cnt_postgres
-    restart: always
+    restart: no
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
@@ -44,7 +44,7 @@ services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: cnt_sqlserver
-    restart: always
+    restart: no
     environment:
       SA_PASSWORD: ${SQLSERVER_PASSWORD}
       ACCEPT_EULA: "Y"
@@ -65,16 +65,16 @@ services:
   adminer:
     image: adminer:latest
     container_name: cnt_adminer
-    restart: always
+    restart: no
     ports:
       - "8080:8080"
     networks:
       - db_network
-    depends_on:
-      mysql:
-        condition: service_healthy
-      postgres:
-        condition: service_healthy
+    # depends_on:
+    #   mysql:
+    #     condition: service_healthy
+    #   postgres:
+    #     condition: service_healthy
     environment:
       ADMINER_DEFAULT_SERVER: mysql
       ADMINER_DESIGN: pepa-linha
