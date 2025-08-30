@@ -439,6 +439,9 @@ docker ps -a
 # Acceder a un contenedor en modo interactivo
 docker exec -it cnt_sqlserver bash
 
+# Detener todos los contenedores
+docker stop $(docker ps -q)
+
 # Detener un contenedor específico
 docker stop <container_name>
 
@@ -463,6 +466,9 @@ docker system df
 
 # Ver eventos en tiempo real
 docker events
+
+# Ver networks actuales 
+docker network ls
 ```
 
 ### Limpieza General
