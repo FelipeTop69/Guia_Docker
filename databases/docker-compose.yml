@@ -76,8 +76,8 @@ services:
     #   postgres:
     #     condition: service_healthy
     environment:
-      ADMINER_DEFAULT_SERVER: mysql
-      ADMINER_DESIGN: pepa-linha
+      ADMINER_DEFAULT_SERVER: mysql     
+      ADMINER_DESIGN: pappu687       
 
 volumes:
   mysql_data:
